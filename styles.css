@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin: 1em;
+}
+h4 {
+  text-align: center;
+  font-size: 1em;
+  margin-top: 1em;
+}
+.container {
+  width: 75%;
+}
+
+.con {
+  margin-top: 15rem;
+}
+
+.qBtn {
+  width: 20%;
+  color: blue;
+  background-color: #ff8e7a;
+}
+
+.over {
+  border: 3px dotted #666;
+}
+
+.card {
+  width: 18rem;
+}
+#signUpIn {
+  text-align: right;
+  list-style-position: inside;
+}
+
+form {
+  width: 450px;
+  min-height: 450px;
+  height: auto;
+  border-radius: 5px;
+  margin: 2% auto;
+  box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
+  padding: 2%;
+}
+input {
+  background-color: #eee;
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  border-radius: 20px;
+  width: 100%;
+}
+
+button {
+  width: 100%;
+  margin-top: 3em;
+  border-radius: 20px;
+  border: 1px solid #ff4b2b;
+  background-color: #ff4b2b;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+}
+
