@@ -1,7 +1,7 @@
 let cartDisplay = document.querySelector(".cart-items");
 console.log(JSON.parse(localStorage.getItem("cartItems")));
 let items = JSON.parse(localStorage.getItem("cartItems"));
-
+let totalprice = 0;
 if (items != null) {
   for (let i = 0; i < items.length; i++) {
     let div = document.createElement("div");
@@ -12,14 +12,13 @@ if (items != null) {
                     <p>Price: $${items[i].price}`;
     cartDisplay.appendChild(div);
   }
-  console.log(items);
-  let totalprice = 0;
+
   for (let i = 0; i < items.length; i++) {
 
     totalprice += items[i].price;
   }
   
-  document.getElementById("totalDisplay").innerHTML = "Your total is: $" + totalprice;
+  // document.getElementById("totalDisplay").innerHTML = "Your total is: $" + totalprice;
 }else{
   
   document.getElementById("totalDisplay").innerHTML = 'Your Shopping Cart is empty!';
@@ -28,6 +27,7 @@ if (items != null) {
 
 function checkOutItem() {
   if (items != null) {
+    
   alert(`Your total price is : $${totalprice}\n Please click okay to proceed to the checkout`);
   window.location.href = "index.php?checkout";
   return totalprice;

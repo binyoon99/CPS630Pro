@@ -16,7 +16,6 @@
   </head>
   <body>
   <div class="cart-items"></div>
-
   <div id= "totalDisplay" ></div>
   <a onclick= checkOutItem() class="btn btn-info btn-lg">
         Check Out

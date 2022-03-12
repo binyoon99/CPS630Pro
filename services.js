@@ -88,7 +88,7 @@ function handleDragLeave(ev) {
 }
 
 function handleDrop(ev) {
-  console.log("YEEEEET");
+
   const checkItemStorage = (item) => {
     let cartItems = JSON.parse(localStorage.getItem("cartItems"));
     if (cartItems == null) return false;

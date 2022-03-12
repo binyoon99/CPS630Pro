@@ -12,10 +12,15 @@
     />
     <link rel="stylesheet" href="styles.css" />
     <script src="checkout.js" defer></script>
+    <script src="cart.js" defer></script>
     <title>Iter 1</title>
   </head>
   <body>
-  <div class="orderSummary">yeet</div>
- 
+  
+  <div id="orderSummary">yeet</div>
+  <div class="cart-items"></div>
+    <?php include 'checkoutform.php';?>
+
+    
   </body>
 </html>

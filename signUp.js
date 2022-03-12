@@ -23,7 +23,7 @@ const addUser = (e) => {
   }
 
   if (JSON.parse(localStorage.getItem(`${user.username}`)) == null) {
-    
+  
     localStorage.setItem(`${user.username}`, JSON.stringify(user));
     alert("Registration completed, you can now log in");
     window.location.href = "index.php?signIn";
