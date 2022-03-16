@@ -12,7 +12,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="styles.css" />
-    <title>Iter 1</title>
+    <title>Kitchen 26</title>
   </head>
   <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -53,6 +53,12 @@
             </li>
             <li class="nav-item active" id= "signUpIn">
               <a class="nav-link" href="index.php?signIn">Sign In</a>
+            </li>
+            <li class="nav-item active" id="search">
+              <a class="nav-link" href="index.php?search">Search</a>
+            </li>
+            <li class="nav-item active" id="dbMaintain">
+              <a class="nav-link" href="index.php?dbMaintain">db Maintain</a>
             </li>
           </ul>
         </div>

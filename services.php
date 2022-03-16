@@ -1,3 +1,6 @@
+<?php 
+  include_once('get-items.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -25,51 +28,32 @@
                 ondragover="event.preventDefault()">
     <div class="container">
     <h1>We offer high end kitchen appliances</h1>
-      <div class="card" draggable="true" id="toaster">
-        <img
-          class="card-img-top"
-          src="./images/toaster.jpg"
-          alt="Card image cap"
-        />
-        <div class="card-body">
-          <p class="card-text">
-            This is a toaster has the ability to make you pog your pants. Yes,
-            it's just that damn good
-          </p>
-          <div class="quantity-select">
-            <p>$299 CAD</p>
-            <p>Choose Quantity</p>
-            <span
-              ><button class="qBtn" onclick="decrement()">-</button>
-              <span class="quantity"></span>
-              <button class="qBtn" onclick="increment()">+</button></span
-            >
+    <?php #php code to load items from the database and display on the page 
+      if ($result->num_rows > 0){
+        while ($row = $result->fetch_assoc()) {
+          echo "<div class='card' draggable='true' id=".$row["item_name"]."title>
+          <img
+            class='card-img-top'
+            src=".$row["img_src"]."
+            alt='Card image cap'
+          />
+          <div class='card-body'>
+            <p class='card-text'>".$row["item_desc"]."</p>
+            <div class='quantity-select'>
+              <p>".$row["price"]."</p>
+              <p>Choose Quantity</p>
+              <span
+                ><button class='qBtn' onclick=\"decrement(".$row["item_id"].")\">-</button>
+                <span id=".$row["item_id"].">1</span>
+                <button class='qBtn' onclick=\"increment(".$row["item_id"].")\">+</button></span
+              >
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="card" draggable="true" id="mixer">
-        <img
-          class="card-img-top"
-          src="./images/mixer.jpg"
-          alt="Card image cap"
-        />
-        <div class="card-body">
-          <p class="card-text">
-            This is a Kitchen Mixer, it mixes many things proving to be a useful
-            appliance
-          </p>
-          <div class="quantity-select">
-            <p>$499 CAD</p>
-            <p>Choose Quantity</p>
-            <span
-              ><button class="qBtn" onclick="decrement2()">-</button>
-              <span class="quantity2"></span>
-              <button class="qBtn" onclick="increment2()">+</button></span
-            >
-          </div>
-        </div>
-      </div>
-    
+        </div>";
+        }
+      }
+    ?>
+
     </div>
   </body>
 </html>

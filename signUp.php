@@ -1,3 +1,18 @@
+<?php 
+#include_once('connection.php'); 
+#include_once('sqlcommands.php');
+class User{
+  public $username;
+  public $email;
+  public $password;
+
+  function __construct($username, $email, $password) {
+    $this->username = $username;
+    $this->email = $email;
+    $this->password = $password;
+  }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,12 +26,13 @@
       crossorigin="anonymous"
     />
     <script src="./signUp.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="styles.css" />
     <title>Iter 1</title>
   </head>
   <body>
     <div class="con">
-      <form>
+      <form method="POST">
         <h1>Create an Account to Enter</h1>
         <input
           type="text"
@@ -40,9 +56,9 @@
           id="password"
           placeholder="Enter Password..."
         />
-        <button type="button" onclick="addUser();">Create Account</button>
+        <button type="button" onclick="addUser()">Create Account</button>
         <h4>Already Registered? <a href="index.php?signIn">Sign In</a></h4>
-        <button type="button" onclick="clearStorage()">clear data</button>
+        <button type="button" style="display:none;" onclick="clearStorage()">clear data</button>
       </form>
     </div>
   </body>

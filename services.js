@@ -1,34 +1,23 @@
-let quantityDisplay = document.querySelector(".quantity");
-let quantityDisplay2 = document.querySelector(".quantity2");
-let quantity = 1;
-let quantity2 = 1;
-quantityDisplay.innerHTML = quantity;
-quantityDisplay2.innerHTML = quantity2;
+//let quantityDisplay = document.querySelector(".quantity");
 
-const increment = () => {
-  quantity++;
-  quantityDisplay.innerHTML = quantity;
+//let quantity = 1;
+
+//quantityDisplay.innerHTML = quantity;
+
+const increment = (id) => {
+  console.log(id);
+  let num = parseInt(document.getElementById(id).innerText);
+  num++;
+  document.getElementById(id).innerHTML = num;
 };
 
-const decrement = () => {
-  if (quantity == 1) {
+const decrement = (id) => {
+  if (parseInt(document.getElementById(id).innerText) == 1) {
     return;
   }
-  quantity--;
-  quantityDisplay.innerHTML = quantity;
-};
-
-const increment2 = () => {
-  quantity2++;
-  quantityDisplay2.innerHTML = quantity2;
-};
-
-const decrement2 = () => {
-  if (quantity2 == 1) {
-    return;
-  }
-  quantity2--;
-  quantityDisplay2.innerHTML = quantity2;
+  let num = parseInt(document.getElementById(id).innerText);
+  num--;
+  document.getElementById(id).innerText = num;
 };
 
 let cards = document.querySelectorAll(".card");

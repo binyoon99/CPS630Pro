@@ -17,10 +17,9 @@
   </head>
   <body>
   
-  <div id="orderSummary">yeet</div>
+  <div id="orderSummary"></div>
   <div class="cart-items"></div>
     <?php include 'checkoutform.php';?>
-
     
   </body>
 </html>

@@ -14,10 +14,20 @@
     <title>Iter 1</title>
   </head>
   <body>
-  <div class="card" style="width: 18rem">
+      <div class="row">
+    <div class="card col" style="width: 18rem">
         <img src="./images/me.jpg" alt="" srcset="" />
-        <p>This is me with my kitty</p>
+        <p>This is zach with his kitty</p>
       </div>
+      <div class="card col" style="width: 18rem">
+        <img src="./images/hyebin.png" alt="" srcset="" />
+        <p>This is hyebin hard at work</p>
+      </div>
+      <div class="card col" style="width: 18rem">
+        <img src="./images/addy.jpg" alt="" srcset="" />
+        <p>This is adnan on vacation</p>
+      </div>
+</div>
          <!-- Contact-->
          <section class="page-section" id="contact">
             <div class="container px-4 px-lg-5">
@@ -70,9 +80,9 @@
                             <div class="d-none" id="submitSuccessMessage">
                                 <div class="text-center mb-3">
                                     <div class="fw-bolder">Form submission successful!</div>
-                                    To activate this form, sign up at
+                                    <!-- To activate this form, sign up at -->
                                     <br />
-                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                                    <!-- <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a> -->
                                 </div>
                             </div>
                             <!-- Submit error message-->

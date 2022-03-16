@@ -24,6 +24,10 @@ and the "body" part of the page will be different based on $_GET 'url' -->
 		include 'signIn.php';
 	}else if (isset($_GET['checkout'])){
 		include 'checkout.php';
+	}else if (isset($_GET['search'])){
+		include 'search.php';
+	}else if (isset($_GET['dbMaintain'])){
+		include 'dbMaintain.php';
 	}
     else {	
 		include 'home.php';
